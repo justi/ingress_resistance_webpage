@@ -21,7 +21,9 @@ h6 {
 }
 
 .intro {
-    display: none;
+    height: 0px;
+    padding: 1px 0;
+    background: none;
 }
 
 .video-container {
