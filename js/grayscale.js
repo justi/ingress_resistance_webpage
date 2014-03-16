@@ -20,10 +20,15 @@ $(function() {
 
 //Google Map Skin - Get more at http://snazzymaps.com/
 var myOptions = {
-    zoom: 15,
-    center: new google.maps.LatLng(53.385873, -1.471471),
+    zoom: 11,
+    center: new google.maps.LatLng(52.4005286, 16.9016658),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true,
+    scrollwheel: false,
+    navigationControl: false,
+    mapTypeControl: false,
+    scaleControl: false,
+    draggable: false,
     styles: [{
         "featureType": "water",
         "elementType": "geometry",
@@ -64,7 +69,7 @@ var myOptions = {
         "stylers": [{
             "color": "#000000"
         }, {
-            "lightness": 18
+            "lightness": 30
         }]
     }, {
         "featureType": "road.local",
@@ -72,7 +77,7 @@ var myOptions = {
         "stylers": [{
             "color": "#000000"
         }, {
-            "lightness": 16
+            "lightness": 30
         }]
     }, {
         "featureType": "poi",
@@ -87,9 +92,11 @@ var myOptions = {
         "stylers": [{
             "visibility": "on"
         }, {
-            "color": "#000000"
+            "color": "#0481FE",
         }, {
-            "lightness": 16
+            "lightness": 1
+        }, {
+            "weight": 1
         }]
     }, {
         "elementType": "labels.text.fill",
@@ -98,7 +105,7 @@ var myOptions = {
         }, {
             "color": "#000000"
         }, {
-            "lightness": 40
+            "lightness": 80
         }]
     }, {
         "elementType": "labels.icon",
