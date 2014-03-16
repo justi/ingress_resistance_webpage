@@ -69,9 +69,10 @@ h6 {
     margin-top: 0px;
   }
 
-  #download {
-  	margin-top: 50px;
+  #download {    
     background: url("../img/Ingress_Intel_Map_full-screen_Fotor.jpg") no-repeat scroll center / cover rgba(0, 100, 100, 0);
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   #map {
