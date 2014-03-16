@@ -54,6 +54,9 @@ h6 {
   height: 500px;
   margin-top: 50px;
 }
+#movie {
+  padding-top:30px;
+}
 #contact {
   margin-bottom: 100px;
 }
@@ -61,6 +64,7 @@ h6 {
 @media(min-width:767px) {
   .content-section {
     padding: 0px;
+    margin-top: 50px;
     margin-bottom: 50px;
   }
 
@@ -71,14 +75,12 @@ h6 {
 
   #download {    
     background: url("../img/Ingress_Intel_Map_full-screen_Fotor.jpg") no-repeat scroll center / cover rgba(0, 100, 100, 0);
-    padding-top: 100px;
-    padding-bottom: 100px;
   }
 
   #map {
-    margin-top: 150px;
-    margin-bottom: 50px;
+    margin-top: 70px;
   }
+  
   #contact {
     margin-top: 180px;
   	margin-bottom: 150px;
