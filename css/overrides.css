@@ -19,6 +19,9 @@ h6 {
     font-weight: 700;
     letter-spacing: 1px;
 }
+.navbar{
+  font-family: 'Exo 2', sans-serif;
+}
 
 .intro {
     height: 0px;
@@ -60,14 +63,37 @@ h6 {
   }
 
   #download{
-  	margin-top: 500px;
+  	margin-top: 50px;
   }
 
   #map {
     margin-top: 150px;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
   }
   #contact{
+    margin-top: 200px;
   	margin-bottom: 200px;
   }
+}
+
+.rounded {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  color: #000000;
+  padding: 15px;
+  max-width: 300px;
+  margin: 15px auto;
+}
+
+.g_play_btn{
+  display:block;
+  width: 200px;
+  height:79px;
+  margin: 0px auto;
+  background: url(../img/polish_get.jpg) no-repeat bottom center scroll;
+  background-color: #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
