@@ -66,11 +66,12 @@ h6 {
 
   .download-section {
     padding: 150px 0;
-    margin-top: 300px;
+    margin-top: 0px;
   }
 
   #download {
   	margin-top: 50px;
+    background: url("../img/Ingress_Intel_Map_full-screen.png") no-repeat scroll right bottom / cover rgba(0, 100, 100, 0);
   }
 
   #map {
@@ -78,13 +79,21 @@ h6 {
     margin-bottom: 50px;
   }
   #contact {
-    margin-top: 250px;
-  	margin-bottom: 250px;
+    margin-top: 180px;
+  	margin-bottom: 150px;
+  }
+  .logo{
+    height: 300px;
+    background: url(../img/resistance_logo.png) no-repeat bottom left;
   }
 }
 
 .inl {
   display: inline;
+}
+
+.mt {
+  margin-top: 50px;
 }
 
 .rounded {
