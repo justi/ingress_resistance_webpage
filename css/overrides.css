@@ -20,6 +20,10 @@ h6 {
     letter-spacing: 1px;
 }
 
+.intro {
+    display: none;
+}
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
