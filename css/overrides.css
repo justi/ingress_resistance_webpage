@@ -51,14 +51,15 @@ h6 {
 
 #map {
   width: 100%;
-  height: 500px;
-  margin-top: 50px;
+  height: 400px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 #movie {
   padding-top:30px;
 }
 #contact {
-  margin-bottom: 100px;
+  padding-top: 150px;
 }
 
 @media(min-width:767px) {
@@ -78,9 +79,9 @@ h6 {
   }
 
   #map {
-    margin-top: 70px;
+    margin-top: 0px;
   }
-  
+
   #contact {
     margin-top: 180px;
   	margin-bottom: 150px;
