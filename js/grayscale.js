@@ -149,7 +149,10 @@ var players = {
   'KrisThina': [ "Rataje", 52.388438, 16.9857886, "https://plus.google.com/115911002059899096875" ],
   'yano':  [ "Piątkowo", 52.4634498, 16.9205516, "https://plus.google.com/1/117586564682480190971" ],
   'Rednave': [ "Cały Poznań", 52.3034662, 17.0278719, "https://plus.google.com/102220143813987229886" ]
-};  
+};
+
+var image = './img/marker-32.png';
+
 
 for (var key in players) {
   var data = players[key];
@@ -157,11 +160,20 @@ for (var key in players) {
   var lat = data[1];
   var lng = data[2];
   var plusgoogle = data[3];
+  var text = key + " , miejsce działań: " + place;
+
+  var infowindow = new google.maps.InfoWindow({
+      content: '<div class="infowindow"><b>' + key + '</b></br>Miejsce działań: ' + place + '</br><a href="' + plusgoogle + '">Profil +</a></div>'
+  });
+
   var marker = new google.maps.Marker({
       position: new google.maps.LatLng (lat, lng),
       map: map,
-      title: key + " , miejsce działań: " + place,
+      icon: image,
+      title: text,
   });
+
+  infowindow.open(map,marker);
 }
 
 

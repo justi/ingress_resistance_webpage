@@ -101,6 +101,13 @@ h6 {
   -o-background-size: cover;
 }
 
+.infowindow
+{
+  font-size:20px;
+  width: auto;
+  color: gray;
+}
+
 @media(min-width:767px) {
 
   .content-section {
