@@ -1,6 +1,6 @@
 var table = [
-				"H", "Hydrogen", "1.00794", 1, 1,
-				"He", "Helium", "4.002602", 18, 1,
+				"Nick", "Hydrogen", "1.00794", 1, 1,
+				"Jakis dlugi nick", "Helium", "4.002602", 18, 1,
 				"Li", "Lithium", "6.941", 1, 2,
 				"Be", "Beryllium", "9.012182", 2, 2,
 				"B", "Boron", "10.811", 13, 2,
@@ -142,6 +142,7 @@ var table = [
 					var element = document.createElement( 'div' );
 					element.className = 'element';
 					element.style.backgroundColor = 'rgba(0,131,209,' + ( Math.random() * 0.5 + 0.5 ) + ')';
+					element.style.width =  100 + table[ i ].length * 25 + 'px';
 
 					var number = document.createElement( 'div' );
 					number.className = 'number';
@@ -169,7 +170,7 @@ var table = [
 					//
 
 					var object = new THREE.Object3D();
-					object.position.x = ( table[ i + 3 ] * 140 ) - 1330;
+					object.position.x = ( table[ i + 3 ] * parseInt(element.style.width)) - 1330;
 					object.position.y = - ( table[ i + 4 ] * 180 ) + 990;
 
 					targets.table.push( object );
