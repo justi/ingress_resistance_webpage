@@ -142,3 +142,26 @@ var myOptions = {
 };
 
 var map = new google.maps.Map(document.getElementById('map'), myOptions);
+
+var players = {
+  'sputnix':  [ "Jeżyce, Poznań Zachód", 52.40286, 16.9016658, "https://plus.google.com/108350777758799125867" ],
+  'skidzior': [ "Łazarz", 52.3943313, 16.8998215, "https://plus.google.com/s/skidzior" ],
+  'KrisThina': [ "Rataje", 52.388438, 16.9857886, "https://plus.google.com/115911002059899096875" ],
+  'yano':  [ "Piątkowo", 52.4634498, 16.9205516, "https://plus.google.com/1/117586564682480190971" ],
+  'Rednave': [ "Cały Poznań", 52.3034662, 17.0278719, "https://plus.google.com/102220143813987229886" ]
+};  
+
+for (var key in players) {
+  var data = players[key];
+  var place = data[0];
+  var lat = data[1];
+  var lng = data[2];
+  var plusgoogle = data[3];
+  var marker = new google.maps.Marker({
+      position: new google.maps.LatLng (lat, lng),
+      map: map,
+      title: key + " , miejsce działań: " + place,
+  });
+}
+
+
