@@ -166,15 +166,6 @@ var table = [
 					scene.add( object );
 
 					objects.push( object );
-
-					//
-
-					var object = new THREE.Object3D();
-					object.position.x = ( table[ i + 3 ] * parseInt(element.style.width)) - 1330;
-					object.position.y = - ( table[ i + 4 ] * 180 ) + 990;
-
-					targets.table.push( object );
-
 				}
 
 				// grid
@@ -204,7 +195,6 @@ var table = [
 				controls.maxDistance = 6000;
 				controls.addEventListener( 'change', render );
 
-				transform( targets.table, 5000 );
 				transform( targets.grid, 5000 );
 
 				//
