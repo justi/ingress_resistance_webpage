@@ -246,13 +246,7 @@ var table = [
 				document.getElementById( 'container' ).appendChild( renderer.domElement );
 
 				//
-
-				controls = new THREE.TrackballControls( camera, renderer.domElement );
-				controls.rotateSpeed = 0.5;
-				controls.minDistance = 500;
-				controls.maxDistance = 6000;
-				controls.addEventListener( 'change', render );
-
+				
 				var button = document.getElementById( 'table' );
 				button.addEventListener( 'click', function ( event ) {
 
