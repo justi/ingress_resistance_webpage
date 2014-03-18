@@ -177,53 +177,6 @@ var table = [
 
 				}
 
-				// sphere
-
-				var vector = new THREE.Vector3();
-
-				for ( var i = 0, l = objects.length; i < l; i ++ ) {
-
-					var phi = Math.acos( -1 + ( 2 * i ) / l );
-					var theta = Math.sqrt( l * Math.PI ) * phi;
-
-					var object = new THREE.Object3D();
-
-					object.position.x = 800 * Math.cos( theta ) * Math.sin( phi );
-					object.position.y = 800 * Math.sin( theta ) * Math.sin( phi );
-					object.position.z = 800 * Math.cos( phi );
-
-					vector.copy( object.position ).multiplyScalar( 2 );
-
-					object.lookAt( vector );
-
-					targets.sphere.push( object );
-
-				}
-
-				// helix
-
-				var vector = new THREE.Vector3();
-
-				for ( var i = 0, l = objects.length; i < l; i ++ ) {
-
-					var phi = i * 0.175 + Math.PI;
-
-					var object = new THREE.Object3D();
-
-					object.position.x = 900 * Math.sin( phi );
-					object.position.y = - ( i * 8 ) + 450;
-					object.position.z = 900 * Math.cos( phi );
-
-					vector.x = object.position.x * 2;
-					vector.y = object.position.y;
-					vector.z = object.position.z * 2;
-
-					object.lookAt( vector );
-
-					targets.helix.push( object );
-
-				}
-
 				// grid
 
 				for ( var i = 0; i < objects.length; i ++ ) {
@@ -245,37 +198,14 @@ var table = [
 				renderer.domElement.style.position = 'absolute';
 				document.getElementById( 'container' ).appendChild( renderer.domElement );
 
-				//
-				
-				var button = document.getElementById( 'table' );
-				button.addEventListener( 'click', function ( event ) {
-
-					transform( targets.table, 2000 );
-
-				}, false );
-
-				var button = document.getElementById( 'sphere' );
-				button.addEventListener( 'click', function ( event ) {
-
-					transform( targets.sphere, 2000 );
-
-				}, false );
-
-				var button = document.getElementById( 'helix' );
-				button.addEventListener( 'click', function ( event ) {
-
-					transform( targets.helix, 2000 );
-
-				}, false );
-
-				var button = document.getElementById( 'grid' );
-				button.addEventListener( 'click', function ( event ) {
-
-					transform( targets.grid, 2000 );
-
-				}, false );
+				controls = new THREE.TrackballControls( camera, renderer.domElement );
+				controls.rotateSpeed = 0.5;
+				controls.minDistance = 500;
+				controls.maxDistance = 6000;
+				controls.addEventListener( 'change', render );
 
 				transform( targets.table, 5000 );
+				transform( targets.grid, 5000 );
 
 				//
 
