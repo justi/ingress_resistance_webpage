@@ -176,7 +176,7 @@ var table = [
 
 					object.position.x = ( ( i % 5 ) * 400 ) - 800;
 					object.position.y = ( - ( Math.floor( i / 5 ) % 5 ) * 400 ) + 800;
-					object.position.z = ( Math.floor( i / 25 ) ) * 1000 - 2000;
+					object.position.z = ( Math.floor( i / 25 ) ) * 1000 - 2500;
 
 					targets.grid.push( object );
 
