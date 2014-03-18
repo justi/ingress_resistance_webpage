@@ -153,7 +153,6 @@ var players = {
 
 var image = './img/marker-32.png';
 
-
 for (var key in players) {
   var data = players[key];
   var place = data[0];
