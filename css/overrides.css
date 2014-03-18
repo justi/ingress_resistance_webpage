@@ -103,9 +103,10 @@ h6 {
 
 .infowindow
 {
-  font-size:20px;
-  width: auto;
+  font-size:16px;
   color: gray;
+  width: auto;
+  min-width: 200px;
 }
 
 @media(min-width:767px) {

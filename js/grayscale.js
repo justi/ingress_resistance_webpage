@@ -148,10 +148,17 @@ var players = {
   'skidzior': [ "Łazarz", 52.3943313, 16.8998215, "https://plus.google.com/s/skidzior" ],
   'KrisThina': [ "Rataje", 52.388438, 16.9857886, "https://plus.google.com/115911002059899096875" ],
   'yano':  [ "Piątkowo", 52.4634498, 16.9205516, "https://plus.google.com/1/117586564682480190971" ],
-  'Rednave': [ "Cały Poznań", 52.3034662, 17.0278719, "https://plus.google.com/102220143813987229886" ]
+  'Rednave': [ "Cały Poznań", 52.3034662, 17.0278719, "https://plus.google.com/102220143813987229886" ],
+  'barthard': [ "Stare Miasto", 52.408508, 16.933574, "https://plus.google.com/u/1/109042297545888403089" ]
 };
 
 var image = './img/marker-32.png';
+
+function bindInfoWindow(marker, map, infoWindow) {
+  google.maps.event.addListener(marker, 'click', function() {
+    infoWindow.open(map, marker);
+  });
+}
 
 for (var key in players) {
   var data = players[key];
@@ -172,7 +179,9 @@ for (var key in players) {
       title: text,
   });
 
-  infowindow.open(map,marker);
+  bindInfoWindow(marker, map, infowindow)
 }
+
+
 
 
