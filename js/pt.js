@@ -64,9 +64,11 @@ function init() {
 		symbol.textContent = table[i].name;
 		element.appendChild( symbol );
 
-		var details = document.createElement( 'div' );
+		var details = document.createElement( 'a' );
 		details.className = 'details';
-		details.innerHTML = table[i].url
+		details.href = table[i].url;
+		details.target = '_blank';
+		details.textContent = table[i].url;
 		element.appendChild( details );
 
 		var object = new THREE.CSS3DObject( element );
