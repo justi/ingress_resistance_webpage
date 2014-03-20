@@ -149,7 +149,10 @@ var players = {
   'KrisThina': [ "Rataje", 52.388438, 16.9857886, "https://plus.google.com/115911002059899096875" ],
   'yano':  [ "Piątkowo", 52.4634498, 16.9205516, "https://plus.google.com/1/117586564682480190971" ],
   'Rednave': [ "Cały Poznań", 52.3034662, 17.0278719, "https://plus.google.com/102220143813987229886" ],
-  'barthard': [ "Stare Miasto", 52.408508, 16.933574, "https://plus.google.com/u/1/109042297545888403089" ]
+  'barthard': [ "Stare Miasto", 52.408508, 16.933574, "https://plus.google.com/u/1/109042297545888403089" ],
+  'p33j4y': [ "Komorniki", 52.3340029, 16.8053698, "https://plus.google.com/+PiotrBartkowiak" ],
+  'Rodis': [ "Widla/Dębiec", 52.3687614, 16.9111761, null ]
+
 };
 
 var image = './img/marker-32.png';
@@ -165,7 +168,7 @@ for (var key in players) {
   var place = data[0];
   var lat = data[1];
   var lng = data[2];
-  var plusgoogle = data[3];
+  var plusgoogle = data[3] || "https://plus.google.com/";
   var text = key + " , miejsce działań: " + place;
 
   var infowindow = new google.maps.InfoWindow({
