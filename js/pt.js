@@ -12,10 +12,10 @@ jQuery.ajax({
 		{
 				tmp = response.feed.entry[i].content.$t.split(',');
 				tmpUrl = '';
-				if(tmp[3]) { 
+				if(tmp[3]) {
 					tmpUrl = tmp[3].split(':');
 					tmpUrl.shift();
-					tmpUrl = tmpUrl.join(':').trim(); 
+					tmpUrl = tmpUrl.join(':').trim();
 				}
 				players.push({
 					'name': tmp[0].split(':')[1].trim(),
@@ -24,7 +24,7 @@ jQuery.ajax({
 					'url':  tmpUrl
 				});
 		}
-		
+
 		table = players;
 		init();
 		animate();
@@ -40,7 +40,7 @@ var targets = { table: [], sphere: [], helix: [], grid: [] };
 function init() {
 
 	camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
-	camera.position.z = 3000;
+	camera.position.z = 1000;
 
 	scene = new THREE.Scene();
 
@@ -52,11 +52,11 @@ function init() {
 		var element = document.createElement( 'div' );
 		element.className = 'element';
 		element.style.backgroundColor = 'rgba(0,131,209,' + ( Math.random() * 0.5 + 0.5 ) + ')';
-		element.style.width =  100 + table[i].name.length * 25 + 'px';
+		element.style.width =  100 + table[i].name.length * 28 + 'px';
 
 		var number = document.createElement( 'div' );
 		number.className = 'number';
-		number.textContent = table[i].level;
+		number.textContent = 'L' + table[i].level;
 		element.appendChild( number );
 
 		var symbol = document.createElement( 'div' );
@@ -68,8 +68,8 @@ function init() {
 		details.className = 'details';
 		details.href = table[i].url;
 		details.target = '_blank';
-		details.textContent = table[i].url;
-		element.appendChild( details );
+		details.textContent = 'Google +';
+		if (table[i].url) element.appendChild( details );
 
 		var object = new THREE.CSS3DObject( element );
 		object.position.x = Math.random() * 4000 - 2000;
