@@ -88,7 +88,7 @@ function init() {
 
 		object.position.x = ( ( i % 5 ) * 500 ) - 1000;
 		object.position.y = ( - ( Math.floor( i / 5 ) % 5 ) * 400 ) + 800;
-		object.position.z = ( Math.floor( i / 25 ) ) * 100 - 250;
+		object.position.z = ( Math.floor( i / 25 ) ) * 100 - 250 - Math.random() * 200;
 
 		targets.grid.push( object );
 
