@@ -1,5 +1,11 @@
 var table = []
 
+//Helper
+function shuffle(o){ //v1.0
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
+
 jQuery.ajax({
 	url: "https://spreadsheets.google.com/feeds/list/1fO2uVSHnug26LZYDEU2lUcCSgIOHMEQA93FuggnEoeI/465951791/public/basic?alt=json-in-script",
 	jsonp: "callback",
@@ -25,7 +31,7 @@ jQuery.ajax({
 				});
 		}
 
-		table = players;
+		table = shuffle(players);
 		init();
 		animate();
 	}
