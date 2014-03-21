@@ -22,6 +22,9 @@ h6 {
 .navbar{
   font-family: 'Exo', sans-serif;
 }
+.navbar-brand {
+  font-size: 16px;
+}
 
 .intro {
     display: table;
@@ -47,7 +50,7 @@ h6 {
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
 }
- 
+
 .video-container iframe,
 .video-container object,
 .video-container embed {
@@ -101,6 +104,16 @@ h6 {
   -o-background-size: cover;
 }
 
+.g_feed {
+  margin-bottom: 15px;
+}
+
+.inl.social {
+  font-size: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 .infowindow
 {
   font-size:16px;
@@ -126,7 +139,7 @@ h6 {
     padding-top:80px;
   }
 
-  #download {    
+  #download {
     background: url("../img/Ingress_Intel_Map_full-screen_Fotor.jpg") no-repeat scroll center / cover rgba(0, 100, 100, 0);
   }
 
@@ -141,5 +154,11 @@ h6 {
   .logo{
     height: 300px;
     background: url(../img/resistance_logo.png) no-repeat bottom left;
+  }
+  .g_feed {
+    margin-left: 150px;
+  }
+  .inl.social {
+    margin-left: 150px;
   }
 }
