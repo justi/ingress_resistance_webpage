@@ -37,6 +37,7 @@ jQuery.ajax({
 	}
 });
 
+var is_mobile = $.browser.mobile
 var camera, scene, renderer;
 var controls;
 
@@ -46,7 +47,7 @@ var targets = { table: [], sphere: [], helix: [], grid: [] };
 function init() {
 
 	camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
-	camera.position.z = 3000;
+	camera.position.z = is_mobile ? 4000 : 3000;
 
 	scene = new THREE.Scene();
 
@@ -87,14 +88,15 @@ function init() {
 	}
 
 	// grid
-
+  var divider_x = is_mobile ? 4 : 5;
+  var divider_y = is_mobile ? 6 : 5;
 	for ( var i = 0; i < objects.length; i ++ ) {
 
 		var object = new THREE.Object3D();
 
-		object.position.x = ( ( i % 5 ) * 500 ) - 1000;
-		object.position.y = ( - ( Math.floor( i / 5 ) % 5 ) * 400 ) + 800;
-		object.position.z = ( Math.floor( i / 25 ) ) * 100 - 250 - Math.random() * 200;
+		object.position.x = ( ( i % divider_x ) * 500 ) - divider_x * 180;
+		object.position.y = ( - ( Math.floor( i / divider_x ) % divider_y ) * 400 ) + 800;
+		object.position.z = ( Math.floor( i / (divider_x * divider_y) ) ) * 100 - 250 - Math.random() * 200;
 
 		targets.grid.push( object );
 
@@ -106,7 +108,7 @@ function init() {
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	renderer.domElement.style.position = 'absolute';
 	document.getElementById( 'container' ).appendChild( renderer.domElement );
-	if(!$.browser.mobile) {
+	if(!is_mobile) {
 		controls = new THREE.TrackballControls( camera, renderer.domElement );
 		controls.rotateSpeed = 0.5;
 		controls.minDistance = 600;
