@@ -106,13 +106,13 @@ function init() {
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	renderer.domElement.style.position = 'absolute';
 	document.getElementById( 'container' ).appendChild( renderer.domElement );
-
-	controls = new THREE.TrackballControls( camera, renderer.domElement );
-	controls.rotateSpeed = 0.5;
-	controls.minDistance = 600;
-	controls.maxDistance = 6000;
-	controls.addEventListener( 'change', render );
-
+	if(!$.browser.mobile) {
+		controls = new THREE.TrackballControls( camera, renderer.domElement );
+		controls.rotateSpeed = 0.5;
+		controls.minDistance = 600;
+		controls.maxDistance = 6000;
+		controls.addEventListener( 'change', render );
+	}
 	transform( targets.grid, 5000 );
 
 	//
