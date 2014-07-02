@@ -7,7 +7,7 @@ function shuffle(o){ //v1.0
 };
 
 jQuery.ajax({
-	url: "https://spreadsheets.google.com/feeds/list/1fO2uVSHnug26LZYDEU2lUcCSgIOHMEQA93FuggnEoeI/465951791/public/basic?alt=json-in-script",
+	url: "https://spreadsheets.google.com/feeds/list/1fO2uVSHnug26LZYDEU2lUcCSgIOHMEQA93FuggnEoeI/1/public/basic?alt=json-in-script",
 	jsonp: "callback",
 	dataType: "jsonp",
 	success: function( response ) {
